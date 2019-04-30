@@ -1,3 +1,14 @@
+### CodeBlocks ###
+# specific to CodeBlocks IDE
+*.layout
+*.depend
+# generated directories
+bin/
+obj/
+
+# for (temporary) unused files in the project
+*.unused
+
 # Prerequisites
 *.d
 
