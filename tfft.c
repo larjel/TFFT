@@ -19,12 +19,18 @@
 
 /**
  * @file tfft.c
- * @brief File containing
+ * @brief Tiny Fixed File Table - TFFT.
  *
- * Here typically goes a more extensive explanation of what the header defines.
+ * This is the main file of the Tiny Fixed File Table (TFFT) project.
  *
  * @mainpage
- * This the TFFT project.
+ * Fixed file system for small EEPROM and other non volatile memory where
+ * the user does not wish to use any space for a real file system or where
+ * a "real" file system simply is overkill.<br>
+ * The reason I made this file system is basically that I often have
+ * found myself doing different kind of storage methods when saving simple data to EEPROM.<br>
+ * Often this data is just some counters - perhaps some unsigned 32 bit numbers or similar.
+ * The EEPROM might be as small as 128 bytes and using a real file system is just not feasible.
  *
  * @author Lars Jelleryd
  */
@@ -46,9 +52,9 @@
 /* Tiny Fixed File Table TFFT
  Fixed file system for small EEPROM and other non volatile memory where
  the user does not wish to use any space for a real file system or where
- a "real" file system simply is overkill.
+ a "real" file system simply is overkill.<br>
  The reason I made this file system is basically that I often have
- found myself doing different kind of storage methods when saving simple data to EEPROM.
+ found myself doing different kind of storage methods when saving simple data to EEPROM.<br>
  Often this data is just some counters - perhaps some unsigned 32 bit numbers or similar.
  The EEPROM might be as small as 128 bytes and using a real file system is just not feasible.
  */
