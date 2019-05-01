@@ -16,6 +16,16 @@
  *  You should have received a copy of the GNU Lesser General Public        *
  *  License along with TFFT.  If not, see <http://www.gnu.org/licenses/>.   *
  ****************************************************************************/
+
+/**
+ * @file tfft_crc8.c
+ * @brief File containing
+ *
+ * Here typically goes a more extensive explanation of what the header defines.
+ *
+ * @author Lars Jelleryd
+ */
+
 #include <stdint.h>
 
 #define TFFT_CRC8_USE_TABLE 1

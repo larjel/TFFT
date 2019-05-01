@@ -16,6 +16,16 @@
  *  You should have received a copy of the GNU Lesser General Public        *
  *  License along with TFFT.  If not, see <http://www.gnu.org/licenses/>.   *
  ****************************************************************************/
+
+/**
+ * @file tfft_user.h
+ * @brief File containing
+ *
+ * Here typically goes a more extensive explanation of what the header defines.
+ *
+ * @author Lars Jelleryd
+ */
+
 #ifndef TFFT_USER_H_
 #define TFFT_USER_H_
 

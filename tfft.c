@@ -16,6 +16,19 @@
  *  You should have received a copy of the GNU Lesser General Public        *
  *  License along with TFFT.  If not, see <http://www.gnu.org/licenses/>.   *
  ****************************************************************************/
+
+/**
+ * @file tfft.c
+ * @brief File containing
+ *
+ * Here typically goes a more extensive explanation of what the header defines.
+ *
+ * @mainpage
+ * This the TFFT project.
+ *
+ * @author Lars Jelleryd
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
@@ -406,4 +419,45 @@ int TFFT_ReadString(TFFT_FILE_NAME_TYPE fname, TFFT_SIZE_TYPE maxStrLen, char *p
   pStr[maxStrLen] = '\0';
 
   return TFFT_ReadWriteFile(fname, maxStrLen, (uint8_t*)pStr, 0, 0);
+}
+
+/*----------------------------------------------------------------------------*/
+const char* TFFT_RetValToStr(int retVal)
+{
+    const char *p;
+    switch(retVal)
+    {
+    case TFFT_RW_OK:
+        p = "Success";
+        break;
+    case TFFT_RW_ERR_FILE_NAME:
+        p = "File name not allowed";
+        break;
+    case TFFT_RW_ERR_FILE_TOO_LARGE:
+        p = "Trying to write too large file";
+        break;
+    case TFFT_RW_ERR_ADDRESS:
+        p = "Address out of range";
+        break;
+    case TFFT_RW_ERR_CHECKSUM:
+        p = "CRC error";
+        break;
+    case TFFT_RW_ERR_FILE_TABLE:
+        p = "File table is corrupt";
+        break;
+    case TFFT_RW_ERR_LOW_LEVEL_WRITE:
+        p = "Low level write failed";
+        break;
+    case TFFT_RW_ERR_LOW_LEVEL_READ:
+        p = "Low level read failed";
+        break;
+    case TFFT_RW_ERR_EEPROM_BUSY:
+        p = "EEPROM currently busy. Try later.";
+        break;
+    default:
+        p = "Unknown value!";
+        break;
+    }
+
+    return p;
 }

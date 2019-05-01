@@ -1,4 +1,4 @@
-/*
+/*****************************************************************************
  * Copyright 2001-2010 Georges Menie (www.menie.org)
  * All rights reserved.
  * Redistribution and use in source and binary forms, with or without
@@ -23,9 +23,12 @@
  * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
+ *****************************************************************************/
 
-/* CRC16 implementation according to CCITT standards */
+/**
+ * @file tfft_crc16.c
+ * @brief CRC16 implementation according to CCITT standards
+ */
 
 #include <stdint.h>
 

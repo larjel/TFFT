@@ -16,6 +16,16 @@
  *  You should have received a copy of the GNU Lesser General Public        *
  *  License along with TFFT.  If not, see <http://www.gnu.org/licenses/>.   *
  ****************************************************************************/
+
+/**
+ * @file tfft.h
+ * @brief File containing
+ *
+ * Here typically goes a more extensive explanation of what the header defines.
+ *
+ * @author Lars Jelleryd
+ */
+
 #ifndef TFFT_H_
 #define TFFT_H_
 
@@ -53,6 +63,12 @@ int TFFT_WriteDouble(TFFT_FILE_NAME_TYPE fname, double data);
 
 #define TFFT_WriteData(fname, size, pSrc) TFFT_ReadWriteFile(fname, size, (u8*)pSrc, 1, 0)
 
+/**
+ * @brief Write unsigned 64 bit datatype
+ * @param fname File name
+ * @param data Unsigned 64 bit number to write
+ * @return Result code. See return codes from TFFT_ReadWriteFile().
+ */
 #define TFFT_WriteU64(fname, data) TFFT_Write64(fname, data)
 #define TFFT_WriteS64(fname, data) TFFT_Write64(fname, (uint64_t)data)
 #define TFFT_WriteU32(fname, data) TFFT_Write32(fname, data)
@@ -78,5 +94,7 @@ int TFFT_WriteDouble(TFFT_FILE_NAME_TYPE fname, double data);
 
 int TFFT_WriteString(TFFT_FILE_NAME_TYPE fname, const char *pStr);
 int TFFT_ReadString(TFFT_FILE_NAME_TYPE fname, TFFT_SIZE_TYPE maxStrLen, char *pStr);
+
+const char* TFFT_RetValToStr(int retVal);
 
 #endif /* TFFT_H_ */
